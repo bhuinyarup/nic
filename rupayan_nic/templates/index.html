@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Scholarship Recomendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>National Scholarship Form</h1>
+        </header>
+        <section id="education">
+            <h2>What aid does Scholarship give to students?</h2>
+            <p>
+                Scholarships provide significant aid to students by providing them with Financial Assistance, Access to Education, Reduced Student Debt, Academic and Career Opportunities, Focus on Studies, Encouragement and Motivation, Networking Opportunities and Personal Growth.
+</p>
+            <p>
+                <b>Search for the available scholarships below and find opportunities that match your qualifications and aspirations.
+            </b></p>
+        </section>
+        <main>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter age...">
+                </div>
+                <div class="form-group">
+                    <label for="socialCategory">Social Category:</label>
+                    <select id="socialCategory" name="socialCategory">
+                        <option value="">Select</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="OBC">OBC</option>
+                        <option value="OTHERS">OTHERS</option>
+                        <option value="MINORITY">MINORITY</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="T">Transgender</option>
+                    </select>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+            <section id="results"></section>
+            <div id="pagination" class="pagination"></div>
+        </main>
+        <footer>
+            <p> Developed by Group-3 for the NIC summer Training purpose</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
